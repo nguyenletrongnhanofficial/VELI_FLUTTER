@@ -1,0 +1,39 @@
+name: veli_flutter
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=2.19.3 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Veli_Light
+      fonts:
+        - asset: assets/fonts/Veli_Light.ttf
+
+    - family: Veli_Regular
+      fonts:
+        - asset: assets/fonts/Veli_Regular.ttf
+
+    - family: Veli_SemiBold
+      fonts:
+        - asset: assets/fonts/Veli_SemiBold.ttf
+
+    - family: Veli_Bold
+      fonts:
+        - asset: assets/fonts/Veli_Bold.ttf
+
+    - family: Veli_Black
+      fonts:
+        - asset: assets/fonts/Veli_Black.ttf
