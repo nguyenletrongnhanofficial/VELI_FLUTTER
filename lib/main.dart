@@ -13,7 +13,7 @@ class MainApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
           child: Text(
-            'Chúc nhóm làm việc vui vẻ và hiệu quả😇',
+            'Chúc nhóm làm việc vui vẻ và hiệu quả nha😇',
             style: const TextStyle(
               fontSize: 12,
               fontFamily: "Veli_SemiBold",
