@@ -9,6 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  geolocator: ^9.0.2
+  get: ^4.6.5
+  google_maps_flutter: ^2.2.5
 
 dev_dependencies:
   flutter_test:
@@ -17,6 +20,12 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/images/backgrounds/
+    - assets/images/photos/
+
   fonts:
     - family: Veli_Light
       fonts:
