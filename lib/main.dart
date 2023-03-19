@@ -1,27 +1,33 @@
+//import 'dart:async';
+//import 'dart:js';
+
 import 'package:flutter/material.dart';
+import 'package:veli_flutter/screen/logo_screen.dart';
+import 'package:veli_flutter/screen/signin_screen.dart';
+import 'package:veli_flutter/screen/splash_screen.dart';
+
 
 void main() {
   runApp(const MainApp());
 }
 
-class MainApp extends StatelessWidget {
+class MainApp extends StatefulWidget {
   const MainApp({super.key});
+
+  @override
+  State<MainApp> createState() => _MainAppState();
+}
+
+class _MainAppState extends State<MainApp> {
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text(
-            'Chúc nhóm mình làm việc vui vẻ và hiệu quả nha😇',
-            style: const TextStyle(
-              fontSize: 12,
-              fontFamily: "Veli_SemiBold",
-            ),
-          ),
-        ),
-      ),
       debugShowCheckedModeBanner: false,
+      home: SigninScreen(),
+      //home: SplashScreen(),
     );
   }
 }
+
+

@@ -7,8 +7,10 @@ environment:
   sdk: '>=2.19.3 <3.0.0'
 
 dependencies:
+  textfield_shadow: ^1.2.0
   flutter:
     sdk: flutter
+  checkbox_formfield: ^0.2.0
 
 dev_dependencies:
   flutter_test:
@@ -37,3 +39,5 @@ flutter:
     - family: Veli_Black
       fonts:
         - asset: assets/fonts/Veli_Black.ttf
+  assets:
+  - assets/images/
