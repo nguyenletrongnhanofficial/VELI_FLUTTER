@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:veli_flutter/veli_navigation.dart';
+import 'package:veli_flutter/veli_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,18 +12,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text(
-            'Chúc nhóm mình làm việc vui vẻ và hiệu quả nha😇',
-            style: const TextStyle(
-              fontSize: 12,
-              fontFamily: "Veli_SemiBold",
-            ),
-          ),
-        ),
-      ),
+    return GetMaterialApp(
+      initialRoute: VeliNavigation.descriptionView,
+      getPages: VeliPage.pages,
       debugShowCheckedModeBanner: false,
     );
   }
