@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 import '/../utils/color_utils.dart';
 
-class ProfileView extends StatelessWidget {
+class ProfileView extends StatefulWidget {
   const ProfileView({super.key});
 
+  @override
+  State<ProfileView> createState() => _ProfileViewState();
+}
+
+enum Gender { male, female }
+
+class _ProfileViewState extends State<ProfileView> {
+  Gender gender = Gender.male;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -114,7 +122,7 @@ class ProfileView extends StatelessWidget {
                     const Text(
                       'Họ tên',
                       style: TextStyle(
-                        fontSize: 10,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -123,7 +131,7 @@ class ProfileView extends StatelessWidget {
                     const Text(
                       'Ngày sinh',
                       style: TextStyle(
-                        fontSize: 10,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -148,46 +156,75 @@ class ProfileView extends StatelessWidget {
                     const Text(
                       'Giới tính',
                       style: TextStyle(
-                        fontSize: 10,
                         fontWeight: FontWeight.bold,
+                        fontSize: 16,
                       ),
                     ),
+                    const SizedBox(height: 10),
                     Row(
-                      children: <Widget>[
+                      children: [
                         Expanded(
-                          child: TextFormField(
-                            style: const TextStyle(fontSize: 11),
-                            decoration: InputDecoration(
-                              contentPadding: const EdgeInsets.symmetric(
-                                  vertical: 13, horizontal: 10),
-                              labelText: "Họ Tên",
-                              labelStyle: const TextStyle(color: Colors.black),
-                              filled: true,
-                              fillColor: Colors.white,
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(8),
-                                  borderSide: BorderSide.none),
-                              isDense: true,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            padding: const EdgeInsets.only(left: 15),
+                            child: Row(
+                              children: [
+                                Radio(
+                                  value: Gender.male,
+                                  groupValue: gender,
+                                  activeColor: Color(0xffFFB237),
+                                  onChanged: (Gender? newGender) {
+                                    setState(
+                                      () {
+                                        gender = newGender!;
+                                      },
+                                    );
+                                  },
+                                ),
+                                const Text(
+                                  'Nam',
+                                  style: TextStyle(
+                                    fontFamily: 'AvertaStdCY-Regular',
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
-                        SizedBox(
-                            width:
-                                10), // tạo khoảng trống giữa 2 TextFormFields
+                        const SizedBox(width: 15),
                         Expanded(
-                          child: TextFormField(
-                            style: TextStyle(fontSize: 11),
-                            decoration: InputDecoration(
-                              contentPadding: EdgeInsets.symmetric(
-                                  vertical: 13, horizontal: 10),
-                              labelText: "Họ Tên",
-                              labelStyle: TextStyle(color: Colors.black),
-                              filled: true,
-                              fillColor: Colors.white,
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(8),
-                                  borderSide: BorderSide.none),
-                              isDense: true,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            padding: const EdgeInsets.only(left: 15),
+                            child: Row(
+                              children: [
+                                Radio(
+                                  value: Gender.female,
+                                  groupValue: gender,
+                                  activeColor: Color(0xffFFB237),
+                                  onChanged: (Gender? newGender) {
+                                    setState(
+                                      () {
+                                        gender = newGender!;
+                                      },
+                                    );
+                                  },
+                                ),
+                                const Text(
+                                  'Nữ',
+                                  style: TextStyle(
+                                    fontFamily: 'AvertaStdCY-Regular',
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -214,6 +251,14 @@ class ProfileView extends StatelessWidget {
                     SizedBox(height: size.height * 0.02),
                     const Text(
                       'Trường học',
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const Text_Form_Field(),
+                    const Text(
+                      'Địa chỉ',
                       style: TextStyle(
                         fontSize: 10,
                         fontWeight: FontWeight.bold,
