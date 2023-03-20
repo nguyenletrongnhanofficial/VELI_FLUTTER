@@ -27,9 +27,9 @@ class _UpdatePasswordState extends State<UpdatePassword> {
   void initState() {
     super.initState();
 
-    controllerOld.text = '123456';
-    controllerNew.text = '123456';
-    controllerRepeat.text = '123456';
+    controllerOld.text = '12345678';
+    controllerNew.text = '12345678';
+    controllerRepeat.text = '12345678';
 
     isPasswordVisibleOld = true;
     isPasswordVisibleNew = true;
