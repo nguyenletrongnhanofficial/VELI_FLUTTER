@@ -9,6 +9,12 @@ import 'view/setting_view/setting_view.dart';
 class VeliPage {
   static final pages = [
     GetPage(
-        name: VeliNavigation.descriptionView, page: () => const ProfileView()),
+      name: VeliNavigation.descriptionView,
+      page: () => const DescriptionView(),
+    ),
+    GetPage(
+      name: VeliNavigation.profileView,
+      page: () => const ProfileView(),
+    ),
   ];
 }
