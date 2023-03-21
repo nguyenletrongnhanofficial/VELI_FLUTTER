@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:veli_flutter/veli_navigation.dart';
+import 'package:veli_flutter/view/add_post_view/add_post_view.dart';
 import 'package:veli_flutter/view/description_view/description_view.dart';
 import 'package:veli_flutter/view/profile_view/views/profile_view.dart';
 import 'view/setting_view/update_password.dart';
@@ -15,6 +16,10 @@ class VeliPage {
     GetPage(
       name: VeliNavigation.profileView,
       page: () => const ProfileView(),
+    ),
+    GetPage(
+      name: VeliNavigation.addPostView,
+      page: () => const AddPostView(),
     ),
   ];
 }
