@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:veli_flutter/utils/image_utils.dart';
 import '/../utils/color_utils.dart';
 
 class ProfileView extends StatefulWidget {
@@ -16,7 +18,7 @@ class _ProfileViewState extends State<ProfileView> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 246, 246, 249),
+        backgroundColor: ColorUtils.backgroundDesc,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -29,8 +31,7 @@ class _ProfileViewState extends State<ProfileView> {
                         Container(
                           decoration: const BoxDecoration(
                               image: DecorationImage(
-                            image: AssetImage(
-                                "assets/images/photos/imageCover.png"),
+                            image: AssetImage(ImageUtils.imageCover),
                             fit: BoxFit.cover,
                           )),
                         ),
@@ -38,8 +39,8 @@ class _ProfileViewState extends State<ProfileView> {
                           bottom: 35,
                           left: 10,
                           child: Container(
-                            width: 200,
-                            height: 70,
+                            width: 210,
+                            height: 80,
                             decoration: BoxDecoration(
                               color: Colors.white.withOpacity(0.8),
                               borderRadius: BorderRadius.circular(15),
@@ -75,7 +76,7 @@ class _ProfileViewState extends State<ProfileView> {
                           bottom: 45,
                           left: 20,
                           child: Container(
-                            height: 20,
+                            height: 30,
                             decoration: BoxDecoration(
                               color: const Color.fromARGB(255, 205, 201, 201)
                                   .withOpacity(0.5),
@@ -105,14 +106,13 @@ class _ProfileViewState extends State<ProfileView> {
                           ),
                         ),
                         const Positioned(
-                          top: 20,
+                          top: 35,
                           left: 20,
                           child: CircleAvatar(
-                            maxRadius: 30,
-                            minRadius: 30,
+                            maxRadius: 35,
+                            minRadius: 35,
                             backgroundColor: Colors.grey,
-                            backgroundImage:
-                                AssetImage('assets/images/photos/avatar.png'),
+                            backgroundImage: AssetImage(ImageUtils.avatar),
                           ),
                         )
                       ],
@@ -172,7 +172,7 @@ class _ProfileViewState extends State<ProfileView> {
                             children: [
                               Expanded(
                                 child: Container(
-                                  height: 35,
+                                  height: 38,
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(8),
@@ -206,7 +206,7 @@ class _ProfileViewState extends State<ProfileView> {
                               const SizedBox(width: 15),
                               Expanded(
                                 child: Container(
-                                  height: 35,
+                                  height: 38,
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(8),
@@ -258,7 +258,23 @@ class _ProfileViewState extends State<ProfileView> {
                             ),
                           ),
                           const SizedBox(height: 10),
-                          const Text_Form_Field(),
+                          TextFormField(
+                            keyboardType: TextInputType.number,
+                            inputFormatters: <TextInputFormatter>[
+                              FilteringTextInputFormatter.digitsOnly
+                            ],
+                            style: const TextStyle(fontSize: 11),
+                            decoration: InputDecoration(
+                              contentPadding: const EdgeInsets.symmetric(
+                                  vertical: 13, horizontal: 10),
+                              filled: true,
+                              fillColor: Colors.white,
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(8),
+                                  borderSide: BorderSide.none),
+                              isDense: true,
+                            ),
+                          ),
                           SizedBox(height: size.height * 0.02),
                           const Text(
                             'Trường học',
