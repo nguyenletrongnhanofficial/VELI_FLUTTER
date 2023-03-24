@@ -13,6 +13,5 @@ class ColorUtils {
   static Color defaultButtonActive = const Color(0xFF0EBF7E);
   static Color defaultBackground = const Color(0xFFE5E5E5);
   static Color defaultTextHint = const Color(0xFFAAA6B9);
- 
-
+  static Color defaultLineBox = const Color(0xFFD8D8D8);
 }
