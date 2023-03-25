@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:veli_flutter/controller/add_post_controller.dart';
 import 'package:veli_flutter/utils/color_utils.dart';
 import 'package:veli_flutter/utils/constant_utils.dart';
 import 'package:veli_flutter/utils/style_utils.dart';
@@ -13,7 +12,6 @@ class AddPostView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var addPostController = Get.put(AddPostController());
     return Scaffold(
       backgroundColor: ColorUtils.defaultBackground,
       body: SafeArea(

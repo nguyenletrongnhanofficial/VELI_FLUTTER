@@ -13,7 +13,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: VeliNavigation.addPostView,
+      initialRoute: VeliNavigation.filterView,
       getPages: VeliPage.pages,
       debugShowCheckedModeBanner: false,
     );
