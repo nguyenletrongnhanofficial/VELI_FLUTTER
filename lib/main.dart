@@ -13,7 +13,9 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: VeliNavigation.descriptionView,
+      //initialRoute: VeliNavigation.onboardingView,
+      //initialRoute: VeliNavigation.splashView,
+      initialRoute: VeliNavigation.otpView,
       getPages: VeliPage.pages,
       debugShowCheckedModeBanner: false,
     );

@@ -11,5 +11,6 @@ class ColorUtils {
   static Color defaultTextDisable = const Color(0xFF5F5C5C);
   static Color defaultButtonDisable = const Color(0xFFEFEFEF);
   static Color defaultButtonActive = const Color(0xFF0EBF7E);
-
+  static Color defaultButtonGoogle = const Color(0xFFEFEFEF);
+  static Color defaultCheck_remember = const Color(0xFFAAA6B9);
 }
