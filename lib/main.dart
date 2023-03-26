@@ -1,9 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:provider/provider.dart';
 import 'package:veli_flutter/veli_navigation.dart';
 import 'package:veli_flutter/veli_page.dart';
+import 'package:veli_flutter/view/widgets/save_model.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MainApp());
 }
 
@@ -12,12 +17,13 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      //initialRoute: VeliNavigation.onboardingView,
-      //initialRoute: VeliNavigation.splashView,
-      initialRoute: VeliNavigation.otpView,
+    return ChangeNotifierProvider(
+      create: (context) => SaveModel(),
+      builder: (context, child) => GetMaterialApp(
+      initialRoute: VeliNavigation.saveView,
       getPages: VeliPage.pages,
       debugShowCheckedModeBanner: false,
+    ),
     );
   }
 }

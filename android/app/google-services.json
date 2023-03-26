@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "748844761637",
+    "project_id": "demosellchat-6069e",
+    "storage_bucket": "demosellchat-6069e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748844761637:android:f7bbfd79cacd72ac7c75cc",
+        "android_client_info": {
+          "package_name": "com.example.veli_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748844761637-23virms4fpg70ibos2mrem0u669q9lnf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.veli_flutter",
+            "certificate_hash": "ec9f1ef6470ab49874f29324ca809c25a864d3e7"
+          }
+        },
+        {
+          "client_id": "748844761637-pk15n13onf7j1fo8tn94qonpvluis13t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGCUiIqa1JrB42l_fY5Ts2nWVloT2zcKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "748844761637-pk15n13onf7j1fo8tn94qonpvluis13t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
