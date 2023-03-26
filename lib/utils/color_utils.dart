@@ -17,4 +17,9 @@ class ColorUtils {
   static Color defaultLineBox = const Color(0xFFD8D8D8);
   static Color defaultInactiveLine = const Color(0xFFCCC4C2);
   static Color defaultActiveLine = const Color(0xFF0EBF7E);
+  static Color backgroundMessageMine = const Color(0xFF0EBF7E);
+  static Color backgroundMessageFriend = const Color(0xFFFF9228);
+  static Color defaultTextTime = const Color(0xFFAAA6B9);
+
+
 }
