@@ -71,7 +71,7 @@ class DescriptionView extends StatelessWidget {
                       ),
                       child: Center(
                         child: Text(
-                          'NHĂN TIN VỚI NGƯỜI BÁN',
+                          'NHẮN TIN VỚI NGƯỜI BÁN',
                           style: StyleUtils.commonText(
                             fontSize: 14,
                             fontWeight: FontWeight.w700,
