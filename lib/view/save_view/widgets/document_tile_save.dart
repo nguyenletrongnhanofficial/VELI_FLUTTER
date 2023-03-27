@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:veli_flutter/view/save_view/views/bottomsheet_save.dart';
-import 'package:veli_flutter/view/widgets/document.dart';
+import 'package:veli_flutter/model/document.dart';
+import 'package:veli_flutter/view/save_view/widgets/bottomsheet_save.dart';
+
+
 
 class DocumentTileSave extends StatelessWidget {
   Document document;

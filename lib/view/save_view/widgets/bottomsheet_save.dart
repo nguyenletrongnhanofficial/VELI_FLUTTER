@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:veli_flutter/view/widgets/document.dart';
-import 'package:veli_flutter/view/widgets/save_model.dart';
+import 'package:veli_flutter/model/document.dart';
+import 'package:veli_flutter/model/save_model.dart';
+
 
 class BottomSheetSave extends StatefulWidget {
   Document document;

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:veli_flutter/view/widgets/document.dart';
-import 'package:veli_flutter/view/widgets/save_model.dart';
+import 'package:veli_flutter/model/document.dart';
+import 'package:veli_flutter/model/save_model.dart';
+import 'package:veli_flutter/utils/color_utils.dart';
+import 'package:veli_flutter/utils/style_utils.dart';
+import 'package:veli_flutter/view/save_view/widgets/document_tile_save.dart';
 
-import 'document_tile_save.dart';
+
 
 class SaveView extends StatefulWidget {
   const SaveView({super.key});
@@ -28,9 +31,13 @@ class _SaveViewState extends State<SaveView> {
                 Positioned(
                   left: size.width * 0.45,
                   top: 15,
-                  child: const Text(
+                  child: Text(
                     'LƯU',
-                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                    style: StyleUtils.commonText(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                            color: ColorUtils.defaultTextDisable,
+                          ),
                   ),
                 ),
                 Positioned(
