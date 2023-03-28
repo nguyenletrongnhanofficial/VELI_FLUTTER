@@ -20,6 +20,10 @@ class ColorUtils {
   static Color backgroundMessageMine = const Color(0xFF0EBF7E);
   static Color backgroundMessageFriend = const Color(0xFFFF9228);
   static Color defaultTextTime = const Color(0xFFAAA6B9);
+  static Color defaultButtonGoogle = const Color(0xFFEFEFEF);
+  static Color defaultCheckremember = const Color(0xFFAAA6B9);
+
+
 
 
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:passwordfield/passwordfield.dart';
+import 'package:get/get.dart';
 import 'package:veli_flutter/utils/style_utils.dart';
+import 'package:veli_flutter/view/forgot_view/forgot_view.dart';
 
 import '../../utils/color_utils.dart';
 
@@ -119,13 +120,15 @@ class LoginView extends StatelessWidget {
                   margin: const EdgeInsets.only(left: 15, top: 20),
                   child: Text(
                     'Nhớ đăng nhập',
-                    style: StyleUtils.commonText(color: ColorUtils.defaultCheck_remember),
+                    style: StyleUtils.commonText(color: ColorUtils.defaultCheckremember),
                   ),
                 ),
                 Container(
                   margin: const EdgeInsets.only(left:93, top:24),
                   child: TextButton(
-                      onPressed: (){},
+                      onPressed: (){
+                        Get.to(ForgotView());
+                      },
                       child: Text(
                         'Quên mật khẩu?',
                         style: StyleUtils.commonText()

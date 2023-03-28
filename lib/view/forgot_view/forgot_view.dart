@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:veli_flutter/utils/color_utils.dart';
 import 'package:veli_flutter/utils/image_utils.dart';
 import 'package:veli_flutter/utils/style_utils.dart';
+import 'package:veli_flutter/view/otp_view/otp_view.dart';
 
 class ForgotView extends StatelessWidget {
   const ForgotView({Key? key}) : super(key: key);
@@ -75,12 +78,15 @@ class ForgotView extends StatelessWidget {
               height: 50,
               width: 317,
               child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(ColorUtils.defaultButtonActive)),
                 child: Text(
                   'Tiếp tục',
                   style:
                   StyleUtils.commonText(fontSize: 18, color: Colors.white),
                 ),
-                onPressed: () => {},
+                onPressed: () => {
+                  Get.to(OtpView())
+                },
               ),
             )
 

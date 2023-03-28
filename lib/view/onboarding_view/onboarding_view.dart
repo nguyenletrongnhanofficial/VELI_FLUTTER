@@ -29,7 +29,7 @@ class OnboardingView extends StatelessWidget {
                 Image(
                   height: 60,
                   width: 60,
-                  image: AssetImage(ImageUtils.imageOnboading),
+                  image: AssetImage(ImageUtils.imageOnboarding),
                 ),
                 Text('Veli',
                     style: TextStyle(

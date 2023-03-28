@@ -4,9 +4,14 @@ import 'package:veli_flutter/view/add_post_view/add_post_view.dart';
 import 'package:veli_flutter/view/chat_view/chat_view.dart';
 import 'package:veli_flutter/view/description_view/description_view.dart';
 import 'package:veli_flutter/view/filter_view/filter_view.dart';
+import 'package:veli_flutter/view/login_view/login_view.dart';
 import 'package:veli_flutter/view/message_view/message_view.dart';
+import 'package:veli_flutter/view/onboarding_view/onboarding_view.dart';
+import 'package:veli_flutter/view/otp_view/otp_view.dart';
 import 'package:veli_flutter/view/profile_view/views/profile_view.dart';
 import 'package:veli_flutter/view/save_view/views/save_view.dart';
+import 'package:veli_flutter/view/signup_view/signup_view.dart';
+import 'package:veli_flutter/view/splash_view/splash_view.dart';
 import 'view/setting_view/update_password.dart';
 import 'view/profile_view/views/add_school_view.dart';
 import 'view/setting_view/setting_view.dart';
@@ -40,6 +45,31 @@ class VeliPage {
     GetPage(
       name: VeliNavigation.chatView,
       page: () => const ChatView(),
+    ),
+
+    GetPage(
+      name: VeliNavigation.onboardingView,
+      page: () => const OnboardingView(),
+    ),
+
+    GetPage(
+      name: VeliNavigation.splashView,
+      page: () => const SplashView(),
+    ),
+
+    GetPage(
+      name: VeliNavigation.loginView,
+      page: () => const LoginView(),
+    ),
+
+    GetPage(
+      name: VeliNavigation.signupView,
+      page: () => const SignupView(),
+    ),
+
+    GetPage(
+      name: VeliNavigation.otpView,
+      page: () => const OtpView(),
     ),
   ];
 }
