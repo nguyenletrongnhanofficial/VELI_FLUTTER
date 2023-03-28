@@ -20,7 +20,7 @@ class MainApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => SaveModel(),
       builder: (context, child) => GetMaterialApp(
-      initialRoute: VeliNavigation.saveView,
+      initialRoute: VeliNavigation.otpView,
       getPages: VeliPage.pages,
       debugShowCheckedModeBanner: false,
     ),

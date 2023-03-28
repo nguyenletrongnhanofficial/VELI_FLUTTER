@@ -21,6 +21,7 @@ dependencies:
   google_sign_in: ^6.0.2
   image_picker: ^0.8.5+3
   intl: ^0.17.0
+  pinput: ^2.2.31
 
 dev_dependencies:
   flutter_test:
