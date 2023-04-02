@@ -6,4 +6,10 @@ class ImageUtils{
  static const addImage = 'assets/images/icons/add_picture.png';
  static const send = 'assets/images/icons/send.png';
 
+ static const imageForgot = 'assets/images/photos/image_forgotpassword.png';
+ static const imageOnboarding = 'assets/images/photos/image_onboarding.png';
+ static const imageSplash = 'assets/images/photos/image_splash.png';
+ static const imageOtp = 'assets/images/photos/image_otp.png';
+ static const imageSuccess = 'assets/images/photos/image_success.png';
+
 }
