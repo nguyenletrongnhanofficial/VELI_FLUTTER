@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:veli_flutter/view/widgets/document.dart';
-import 'package:veli_flutter/view/widgets/save_model.dart';
+import 'package:veli_flutter/model/document.dart';
+import 'package:veli_flutter/model/save_model.dart';
+import 'package:veli_flutter/utils/color_utils.dart';
+import 'package:veli_flutter/utils/style_utils.dart';
+import 'package:veli_flutter/view/save_view/widgets/document_tile_save.dart';
 
-import 'document_tile_save.dart';
+
 
 class SaveView extends StatefulWidget {
   const SaveView({super.key});
@@ -17,7 +20,7 @@ class _SaveViewState extends State<SaveView> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor:  Color.fromARGB(255, 238, 238, 238),
+      backgroundColor:  ColorUtils.backgroundDesc,
         body: Consumer<SaveModel>(
       builder: (context, value, child) => Column(
         children: <Widget>[
@@ -27,10 +30,14 @@ class _SaveViewState extends State<SaveView> {
               children: [
                 Positioned(
                   left: size.width * 0.45,
-                  top: 15,
-                  child: const Text(
+                  top: 25,
+                  child: Text(
                     'LƯU',
-                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                    style: StyleUtils.commonText(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                            color: ColorUtils.defaultTextDisable,
+                          ),
                   ),
                 ),
                 Positioned(
@@ -38,9 +45,9 @@ class _SaveViewState extends State<SaveView> {
                   right: 0,
                   child: TextButton(
                     onPressed: () {}, 
-                    child: const Text(
+                    child:  Text(
                       'Xóa tất cả',
-                      style: TextStyle(fontSize: 10, color: Colors.orange),
+                      style: StyleUtils.commonText(fontSize: 10, color: ColorUtils.backgroundMessageFriend),
                     ),
                   ),
                 ),

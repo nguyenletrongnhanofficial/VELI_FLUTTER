@@ -12,4 +12,7 @@ class VeliNavigation {
   static String signupView = '/signupView';
   static String otpView = '/otpView';
   static String forgotView = '/forgotView';
+  static String manageView = '/manageView';
+  static String nosaveView = '/nosaveView';
+  static String nomessageView = '/nomessageView';
 }
