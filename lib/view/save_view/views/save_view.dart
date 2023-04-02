@@ -20,7 +20,7 @@ class _SaveViewState extends State<SaveView> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor:  Color.fromARGB(255, 238, 238, 238),
+      backgroundColor:  ColorUtils.backgroundDesc,
         body: Consumer<SaveModel>(
       builder: (context, value, child) => Column(
         children: <Widget>[
@@ -30,11 +30,11 @@ class _SaveViewState extends State<SaveView> {
               children: [
                 Positioned(
                   left: size.width * 0.45,
-                  top: 15,
+                  top: 25,
                   child: Text(
                     'LƯU',
                     style: StyleUtils.commonText(
-                            fontSize: 15,
+                            fontSize: 20,
                             fontWeight: FontWeight.w600,
                             color: ColorUtils.defaultTextDisable,
                           ),
@@ -45,9 +45,9 @@ class _SaveViewState extends State<SaveView> {
                   right: 0,
                   child: TextButton(
                     onPressed: () {}, 
-                    child: const Text(
+                    child:  Text(
                       'Xóa tất cả',
-                      style: TextStyle(fontSize: 10, color: Colors.orange),
+                      style: StyleUtils.commonText(fontSize: 10, color: ColorUtils.backgroundMessageFriend),
                     ),
                   ),
                 ),

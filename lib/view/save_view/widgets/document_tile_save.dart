@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:veli_flutter/model/document.dart';
+import 'package:veli_flutter/utils/color_utils.dart';
+import 'package:veli_flutter/utils/style_utils.dart';
 import 'package:veli_flutter/view/save_view/widgets/bottomsheet_save.dart';
 
 
@@ -13,17 +15,17 @@ class DocumentTileSave extends StatelessWidget {
     return InkWell(
       onTap: () {
         showModalBottomSheet(
-            backgroundColor: Colors.transparent,
+            backgroundColor: ColorUtils.defaultBottomSheet,
             context: context,
             builder: (context) {
               return BottomSheetSave(document: document);
             });
       },
       child: Container(
-        margin: const EdgeInsets.only(left: 25, right: 25, top: 10, bottom: 10),
+        margin: const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
         height: 170,
         decoration: BoxDecoration(
-            color: Colors.white, borderRadius: BorderRadius.circular(12)),
+            color: ColorUtils.defaultWhite, borderRadius: BorderRadius.circular(12)),
         child: Column(
           children: <Widget>[
             Row(
@@ -42,28 +44,28 @@ class DocumentTileSave extends StatelessWidget {
                   children: [
                     Text(
                       document.nameDocument,
-                      style: const TextStyle(
+                      style: StyleUtils.commonText(
                           fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 5),
                     Text(
                       document.price,
-                      style: const TextStyle(
+                      style: StyleUtils.commonText(
                         fontSize: 12,
                       ),
                     ),
                     const SizedBox(height: 5),
                     Text(
                       document.school,
-                      style: const TextStyle(fontSize: 12),
+                      style:StyleUtils.commonText(fontSize: 12),
                     ),
                     const SizedBox(height: 5),
                     SizedBox(
                       width: 150,
                       child: Text(
                         document.describe,
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(fontSize: 12),
+                
+                        style: StyleUtils.commonText(fontSize: 12),
                       ),
                     ),
                   ],
@@ -81,7 +83,7 @@ class DocumentTileSave extends StatelessWidget {
                 CircleAvatar(
                   maxRadius: 12,
                   minRadius: 12,
-                  backgroundColor: Colors.grey,
+                  backgroundColor: ColorUtils.defaultTextHint,
                   backgroundImage: AssetImage(document.avatar),
                 ),
                 const SizedBox(
@@ -89,17 +91,17 @@ class DocumentTileSave extends StatelessWidget {
                 ),
                 Text(
                   document.name,
-                  style: const TextStyle(fontSize: 15),
+                  style: StyleUtils.commonText(fontSize: 15),
                 ),
                 const SizedBox(width: 15),
                 Text(
                   document.address,
-                  style: const TextStyle(fontSize: 15),
+                  style: StyleUtils.commonText(fontSize: 15),
                 ),
                 const SizedBox(width: 15),
                 Text(
                   document.time,
-                  style: const TextStyle(fontSize: 10, color: Colors.grey),
+                  style: StyleUtils.commonText(fontSize: 10, color: ColorUtils.defaultTextHint),
                 )
               ],
             )
