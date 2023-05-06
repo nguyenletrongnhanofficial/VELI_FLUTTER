@@ -48,7 +48,7 @@ class _BottomSheetSaveState extends State<BottomSheetSave> {
             },
             style: ElevatedButton.styleFrom(
               minimumSize: const Size(350, 50),
-              primary: Color.fromARGB(255, 248, 248, 248),
+              backgroundColor: Color.fromARGB(255, 248, 248, 248),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
               ),
@@ -73,7 +73,7 @@ class _BottomSheetSaveState extends State<BottomSheetSave> {
             onPressed: removeAllItem,
             style: ElevatedButton.styleFrom(
               minimumSize: const Size(350, 50),
-              primary: Colors.red,
+              backgroundColor: Colors.red,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8)),
             ),
@@ -97,7 +97,7 @@ class _BottomSheetSaveState extends State<BottomSheetSave> {
             onPressed: () {},
             style: ElevatedButton.styleFrom(
               minimumSize: const Size(350, 50),
-              primary: Colors.green,
+              backgroundColor: Colors.green,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8)),
             ),
@@ -120,6 +120,6 @@ class _BottomSheetSaveState extends State<BottomSheetSave> {
           
         ],
       ),
-    );;
+    );
   }
 }

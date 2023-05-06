@@ -11,5 +11,8 @@ class ImageUtils{
  static const imageSplash = 'assets/images/photos/image_splash.png';
  static const imageOtp = 'assets/images/photos/image_otp.png';
  static const imageSuccess = 'assets/images/photos/image_success.png';
-
+ static const imageAdvertise = 'assets/images/photos/image_advertise.png';
+ static const image_Documentation = 'assets/images/photos/image_documentation.png';
+ static const image_Uitschool = 'assets/images/photos/image_UITschool.png';
+ static const image_tailieu = 'assets/images/photos/image_tailieu.png';
 }

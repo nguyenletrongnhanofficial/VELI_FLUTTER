@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:veli_flutter/utils/image_utils.dart';
-import 'package:veli_flutter/view/login_view/login_view.dart';
+import 'package:veli_flutter/veli_navigation.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({Key? key}) : super(key: key);
@@ -52,9 +52,9 @@ class SplashView extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.to(()=>LoginView());
+          Get.toNamed(VeliNavigation.loginView);
         },
-        backgroundColor: Color(0xff0EBF7E),
+        backgroundColor: const Color(0xff0EBF7E),
         child: const Icon(
           //Icons.arrow_right_alt_outlined,
           Icons.arrow_forward_sharp,
