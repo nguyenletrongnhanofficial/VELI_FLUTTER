@@ -2,9 +2,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
+import 'package:veli_flutter/model/save_model.dart';
 import 'package:veli_flutter/veli_navigation.dart';
 import 'package:veli_flutter/veli_page.dart';
-import 'package:veli_flutter/view/widgets/save_model.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

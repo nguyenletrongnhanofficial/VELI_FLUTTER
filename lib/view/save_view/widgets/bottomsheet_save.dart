@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:veli_flutter/view/widgets/document.dart';
-import 'package:veli_flutter/view/widgets/save_model.dart';
+import 'package:veli_flutter/model/document.dart';
+import 'package:veli_flutter/model/save_model.dart';
+import 'package:veli_flutter/utils/color_utils.dart';
+import 'package:veli_flutter/utils/image_utils.dart';
+import 'package:veli_flutter/utils/style_utils.dart';
+
 
 class BottomSheetSave extends StatefulWidget {
   Document document;
@@ -24,9 +28,9 @@ class _BottomSheetSaveState extends State<BottomSheetSave> {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(20),
-      decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
+      decoration:  BoxDecoration(
+          color: ColorUtils.defaultWhite,
+          borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(30), topRight: Radius.circular(30))),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -35,7 +39,7 @@ class _BottomSheetSaveState extends State<BottomSheetSave> {
             height: 5,
             width: 50,
             decoration: BoxDecoration(
-                color: const Color(0xFF5B5858),
+                color: ColorUtils.defaultTextDisable,
                 borderRadius: BorderRadius.circular(10)),
           ),
           const SizedBox(
@@ -48,7 +52,7 @@ class _BottomSheetSaveState extends State<BottomSheetSave> {
             },
             style: ElevatedButton.styleFrom(
               minimumSize: const Size(350, 50),
-              backgroundColor: Color.fromARGB(255, 248, 248, 248),
+              backgroundColor: ColorUtils.defaultWhite,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
               ),
@@ -58,13 +62,13 @@ class _BottomSheetSaveState extends State<BottomSheetSave> {
                 const SizedBox(
                   width: 10,
                 ),
-                Image.asset('assets/images/photos/iconDelete.png'),
+                Image.asset(ImageUtils.iconDelete),
                 const SizedBox(
                   width: 10,
                 ),
-                const Text(
+                Text(
                   'Xóa',
-                  style: TextStyle(fontSize: 12, color: Colors.black),
+                  style: StyleUtils.commonText(fontSize: 12, color: ColorUtils.defaultBlack),
                 )
               ],
             ),
@@ -73,7 +77,7 @@ class _BottomSheetSaveState extends State<BottomSheetSave> {
             onPressed: removeAllItem,
             style: ElevatedButton.styleFrom(
               minimumSize: const Size(350, 50),
-              backgroundColor: Colors.red,
+              backgroundColor: ColorUtils.defaultTextRed,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8)),
             ),
@@ -82,13 +86,13 @@ class _BottomSheetSaveState extends State<BottomSheetSave> {
                 const SizedBox(
                   width: 10,
                 ),
-                Image.asset('assets/images/photos/death.png'),
+                Image.asset(ImageUtils.iconDeath),
                 const SizedBox(
                   width: 10,
                 ),
-                const Text(
+                Text(
                   'Xóa hết',
-                  style: TextStyle(fontSize: 12, color: Colors.white),
+                  style: StyleUtils.commonText(fontSize: 12, color: ColorUtils.defaultWhite),
                 )
               ],
             ),
@@ -97,7 +101,7 @@ class _BottomSheetSaveState extends State<BottomSheetSave> {
             onPressed: () {},
             style: ElevatedButton.styleFrom(
               minimumSize: const Size(350, 50),
-              backgroundColor: Colors.green,
+              backgroundColor: ColorUtils.defaultButtonActive,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8)),
             ),
@@ -106,13 +110,13 @@ class _BottomSheetSaveState extends State<BottomSheetSave> {
                 const SizedBox(
                   width: 10,
                 ),
-                Image.asset('assets/images/photos/iconSent.png'),
+                Image.asset(ImageUtils.iconSent),
                 const SizedBox(
                   width: 10,
                 ),
-                const Text(
+                 Text(
                   'Gửi tin nhắn',
-                  style: TextStyle(fontSize: 12, color: Colors.white),
+                  style: StyleUtils.commonText(fontSize: 12, color: ColorUtils.defaultWhite),
                 )
               ],
             ),
