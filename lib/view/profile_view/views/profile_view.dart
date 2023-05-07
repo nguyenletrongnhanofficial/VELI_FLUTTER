@@ -132,7 +132,7 @@ class _ProfileViewState extends State<ProfileView> {
                             ),
                           ),
                           const SizedBox(height: 10),
-                          const Text_Form_Field(),
+                          const CustomTextFormField(),
                           SizedBox(height: size.height * 0.02),
                           const Text(
                             'Ngày sinh',
@@ -248,7 +248,7 @@ class _ProfileViewState extends State<ProfileView> {
                             ),
                           ),
                           const SizedBox(height: 10),
-                          const Text_Form_Field(),
+                          const CustomTextFormField(),
                           SizedBox(height: size.height * 0.02),
                           const Text(
                             'Số điện thoại',
@@ -284,7 +284,7 @@ class _ProfileViewState extends State<ProfileView> {
                             ),
                           ),
                           const SizedBox(height: 10),
-                          const Text_Form_Field(),
+                          const CustomTextFormField(),
                           SizedBox(height: size.height * 0.02),
                           const Text(
                             'Địa chỉ',
@@ -294,7 +294,7 @@ class _ProfileViewState extends State<ProfileView> {
                             ),
                           ),
                           const SizedBox(height: 10),
-                          const Text_Form_Field(),
+                          const CustomTextFormField(),
                         ],
                       )),
                   SizedBox(height: size.height * 0.02),
@@ -302,7 +302,7 @@ class _ProfileViewState extends State<ProfileView> {
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
                       minimumSize: const Size(150, 50),
-                      primary: Color(0xFF0EBF7E),
+                      backgroundColor: const Color(0xFF0EBF7E),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8)),
                     ),
@@ -316,17 +316,17 @@ class _ProfileViewState extends State<ProfileView> {
   }
 }
 
-class Text_Form_Field extends StatelessWidget {
-  const Text_Form_Field({
+class CustomTextFormField extends StatelessWidget {
+  const CustomTextFormField({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      style: TextStyle(fontSize: 11),
+      style: const TextStyle(fontSize: 11),
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.symmetric(vertical: 13, horizontal: 10),
+        contentPadding: const EdgeInsets.symmetric(vertical: 13, horizontal: 10),
         filled: true,
         fillColor: Colors.white,
         border: OutlineInputBorder(
