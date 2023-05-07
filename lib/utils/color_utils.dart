@@ -23,6 +23,7 @@ class ColorUtils {
   static Color defaultButtonGoogle = const Color(0xFFEFEFEF);
   static Color defaultCheckremember = const Color(0xFFAAA6B9);
   static Color defaultBottomSheet = Colors.transparent;
+  static Color defaultSavetext = const Color(0xFF105157);
 
 
 

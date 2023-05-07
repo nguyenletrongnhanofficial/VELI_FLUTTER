@@ -4,6 +4,7 @@ import 'package:veli_flutter/view/add_post_view/add_post_view.dart';
 import 'package:veli_flutter/view/chat_view/chat_view.dart';
 import 'package:veli_flutter/view/description_view/description_view.dart';
 import 'package:veli_flutter/view/filter_view/filter_view.dart';
+import 'package:veli_flutter/view/home_view/home_view.dart';
 import 'package:veli_flutter/view/login_view/login_view.dart';
 import 'package:veli_flutter/view/manage_view/views/manage_view.dart';
 import 'package:veli_flutter/view/message_view/message_view.dart';
@@ -15,9 +16,6 @@ import 'package:veli_flutter/view/profile_view/views/profile_view.dart';
 import 'package:veli_flutter/view/save_view/views/save_view.dart';
 import 'package:veli_flutter/view/signup_view/signup_view.dart';
 import 'package:veli_flutter/view/splash_view/splash_view.dart';
-import 'view/setting_view/update_password.dart';
-import 'view/profile_view/views/add_school_view.dart';
-import 'view/setting_view/setting_view.dart';
 
 class VeliPage {
   static final pages = [
@@ -67,7 +65,7 @@ class VeliPage {
 
     GetPage(
       name: VeliNavigation.signupView,
-      page: () => const SignupView(),
+      page: () => SignupView(),
     ),
 
     GetPage(
@@ -89,5 +87,10 @@ class VeliPage {
       name: VeliNavigation.nosaveView,
       page: () => const NoSaveView(),
     ), 
+
+    GetPage(
+      name: VeliNavigation.homeView,
+      page: () => const HomeView(),
+    ),
   ];
 }

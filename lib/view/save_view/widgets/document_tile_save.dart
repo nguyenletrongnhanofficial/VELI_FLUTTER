@@ -108,6 +108,6 @@ class DocumentTileSave extends StatelessWidget {
           ],
         ),
       ),
-    );;
+    );
   }
 }

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:veli_flutter/controller/signup_controller.dart';
 import 'package:veli_flutter/utils/color_utils.dart';
 import 'package:veli_flutter/utils/image_utils.dart';
 import 'package:veli_flutter/utils/style_utils.dart';
@@ -11,7 +9,7 @@ class OtpView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var otpcon = Get.put(SignupController());
+    // var otpcon = Get.put(SignupController());
     return Scaffold(
         body: Center(
       child: Column(
@@ -56,7 +54,7 @@ class OtpView extends StatelessWidget {
           Container(
             margin: const EdgeInsets.only(top: 41),
             child: Pinput(
-              controller: otpcon.otpcon,
+              //controller: otpcon.otpcon,
               length: 6,
               showCursor: true,
               defaultPinTheme: PinTheme(
@@ -70,7 +68,7 @@ class OtpView extends StatelessWidget {
           ),
           const SizedBox(width: double.infinity, height: 27),
           Text(
-            '00:120 ' + 'Giây',
+            '00:120 Giây ',
             style: StyleUtils.commonText(
               fontSize: 14,
             ),

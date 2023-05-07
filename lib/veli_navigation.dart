@@ -15,4 +15,5 @@ class VeliNavigation {
   static String manageView = '/manageView';
   static String nosaveView = '/nosaveView';
   static String nomessageView = '/nomessageView';
+  static String homeView = '/homeView';
 }
